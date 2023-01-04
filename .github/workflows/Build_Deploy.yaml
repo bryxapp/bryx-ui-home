@@ -21,10 +21,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name bryxui --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }} -d 'bryx-ui-home' -s .
-
-  # Azure logout
-    - name: Logout of Azure
-      run: |
-            az logout
-      if: always()
+            az storage blob upload-batch --destination 'bryx-ui-home' --source . --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }}
