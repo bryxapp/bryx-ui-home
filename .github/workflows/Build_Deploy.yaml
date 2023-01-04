@@ -20,7 +20,7 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        - uses: azure/blob-upload@v1
+    - uses: azure/blob-upload@v1
       with:
         # Required arguments
         azure-storage-account: bryxui
