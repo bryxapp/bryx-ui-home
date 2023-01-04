@@ -17,15 +17,8 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - uses: azure/login@v1
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - uses: azure/blob-upload@v1
-      with:
-        # Required arguments
-        azure-storage-account: bryxui
-        container-name: bryx-ui-home
-        file-pattern: 'build/*'
-        # Optional arguments
-        version-prefix: 'v'
-        version-metadata: true
+        inlineScript: |
+            version=$(echo "v$(date +%Y%m%d%H%M)" | sed -e 's/^v0*//') && az storage blob upload-batch -d 'bryx-ui-home' -s build  --metadata version=$version --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }}
