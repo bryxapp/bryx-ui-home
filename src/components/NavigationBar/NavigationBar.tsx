@@ -1,25 +1,23 @@
-import { Nav, Navbar } from "react-bootstrap"
+import styles from './NavigationBar.module.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import logoSvg from '../../assets/bryx_logo.svg';
 
 export const NavigationBar = () => {
   return (
-      <Navbar expand="lg">
-        <Navbar.Brand href="/">
-          <h1>BRYX</h1>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Item>
-              <Nav.Link href="/templates">Templates</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/forms">Forms</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/past-estimates">Past Estimates</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+    <Navbar className={styles.navbar}>
+    <Container>
+      <Navbar.Brand href="/" className={styles.navbarBrand}>
+        <img
+          alt=""
+          src = {logoSvg}
+          className="d-inline-block align-top"
+        />{' '}
+        BRYX
+      </Navbar.Brand>
+      <Button variant="outline-dark">Login</Button>
+    </Container>
+  </Navbar>
   );
 };
