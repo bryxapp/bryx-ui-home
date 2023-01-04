@@ -21,4 +21,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch -d 'bryx-ui-home' -s . --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }}
+            az storage blob upload-batch -d 'bryx-ui-home' -s build --overwrite --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }}
