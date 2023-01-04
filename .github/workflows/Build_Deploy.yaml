@@ -17,16 +17,11 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name bryxui --auth-mode key -d 'bryx-ui-home' -s .
+            az storage blob upload-batch --account-name bryxui --connection-string ${{ secrets.AZURE_STORAGE_CONNECTIONSTRING }} -d 'bryx-ui-home' -s .
 
   # Azure logout
     - name: Logout of Azure
