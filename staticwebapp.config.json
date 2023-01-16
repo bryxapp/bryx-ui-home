@@ -1,0 +1,10 @@
+{
+    "forwardingGateway": {
+        "requiredHeaders": {
+            "X-Azure-FDID": "b534d5ec-d951-4dd5-8c1b-5c763f7cbeef"
+        },
+        "allowedForwardedHosts": [
+            "bryx-ui-f7a4cpbxc6eta8bj.z01.azurefd.net"
+        ]
+    }
+}
