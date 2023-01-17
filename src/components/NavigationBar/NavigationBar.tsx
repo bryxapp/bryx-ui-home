@@ -1,23 +1,59 @@
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { Link } from '@mui/material';
+import Logo from './Logo/Logo';
 import styles from './NavigationBar.module.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import logoSvg from '../../assets/bryx_logo.svg';
 
-export const NavigationBar = () => {
+const NavigationBar = () => {
   return (
-    <Navbar className={styles.navbar}>
-    <Container>
-      <Navbar.Brand href="/" className={styles.navbarBrand}>
-        <img
-          alt=""
-          src = {logoSvg}
-          className="d-inline-block align-top"
-        />{' '}
-        BRYX
-      </Navbar.Brand>
-      <Button variant="outline-dark">Login</Button>
-    </Container>
-  </Navbar>
+    <AppBar
+      position="static"
+      color='transparent'
+      elevation={0}
+    >
+      <Toolbar sx={{ flexWrap: 'wrap' }}>
+        <Logo />
+        <Typography variant="h3" fontWeight="bold" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+          BRYX
+        </Typography>
+        <nav>
+          <Link 
+            className={styles.nav_link}
+            variant="button"
+            color="text.primary"
+            underline='none'
+            href="/features"
+          >
+            Features
+          </Link>
+          <Link className={styles.nav_link}
+            variant="button"
+            color="text.primary"
+            underline='none'
+            href="/company"
+          >
+            Company
+          </Link>
+          <Link className={styles.nav_link}
+            variant="button"
+            color="text.primary"
+            underline='none'
+            href="/support"
+          >
+            Support
+          </Link>
+        </nav>
+        <Button variant="text" color="secondary" className={styles.nav_button}>
+          Sign In
+        </Button>
+        <Button href="#" variant="contained" color="secondary" className={styles.nav_button}>
+          Get Started
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
-};
+}
+
+export default NavigationBar;

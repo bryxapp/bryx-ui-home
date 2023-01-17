@@ -1,43 +1,12 @@
 .hero {
     /* background: url(../../assets/images/hero.jpg) no-repeat center center; */
     background-size: cover;
-    height: 100vh;
     margin: 2rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-    color: gray;
+    color: #808080;
+    text-align: center;
 }
 
-.hero__content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hero__title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-hero__title__span {
-    color: #f00;
-}
-
-.hero__text {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero__button {
-    background: gray;
-    color: White;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.hero_button {
+    margin: 1rem;
+    font-size: 1.25rem;
 }
