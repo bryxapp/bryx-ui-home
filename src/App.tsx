@@ -10,6 +10,8 @@ import Support from './components/Support/Support';
 function App() {
   return (
     <React.Fragment>
+      <br />
+      <br />
       <NavigationBar />
       <BrowserRouter>
         <Routes>

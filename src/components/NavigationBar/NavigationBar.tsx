@@ -4,7 +4,17 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
 import Logo from './Logo/Logo';
-import styles from './NavigationBar.module.css';
+import { styled } from '@mui/material/styles';
+
+const NavLink = styled(Link)`
+  font-size: 1.25em;
+  margin: 0 1em;
+`;
+
+const NavButton = styled(Button)`
+  font-size: 1.25em;
+  margin: 0 1em;
+`;
 
 const NavigationBar = () => {
   return (
@@ -19,38 +29,37 @@ const NavigationBar = () => {
           BRYX
         </Typography>
         <nav>
-          <Link 
-            className={styles.nav_link}
+          <NavLink
             variant="button"
             color="text.primary"
             underline='none'
             href="/features"
           >
             Features
-          </Link>
-          <Link className={styles.nav_link}
+          </NavLink>
+          <NavLink
             variant="button"
             color="text.primary"
             underline='none'
             href="/company"
           >
             Company
-          </Link>
-          <Link className={styles.nav_link}
+          </NavLink>
+          <NavLink
             variant="button"
             color="text.primary"
             underline='none'
             href="/support"
           >
             Support
-          </Link>
+          </NavLink>
         </nav>
-        <Button variant="text" color="secondary" className={styles.nav_button}>
+        <NavButton variant="text" color="secondary">
           Sign In
-        </Button>
-        <Button href="#" variant="contained" color="secondary" className={styles.nav_button}>
+        </NavButton>
+        <NavButton href="https://dashboard.bryxapp.com/" variant="contained" color="secondary">
           Get Started
-        </Button>
+        </NavButton>
       </Toolbar>
     </AppBar>
   );
