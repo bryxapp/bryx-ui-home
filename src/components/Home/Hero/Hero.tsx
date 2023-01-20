@@ -3,8 +3,6 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import HeroImage from '../../../assets/images/hero.jpg';
 import { Grid } from '@mui/material';
-import Container from '@mui/material/Container';
-
 
 const HeroContainer = styled('div')`
     background: url(${HeroImage}) no-repeat center center;
@@ -26,13 +24,12 @@ const Hero = () => {
         <HeroContainer>
             <div style={{ height: "100%", width: "100%", backgroundColor: "rgba(0,0,0,0.5)" }}>
                 <div style={{ height: '10vh' }} />
-
                 <Grid container direction="row" justifyContent={"flex-end"} alignItems="center" >
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={14} md={6}>
                         <Typography variant="h2" fontWeight="bold" color={"white"}>
                             Transform Your Quotes
                         </Typography>
-                        <Typography variant="h3" color={"white"}>
+                        <Typography variant="h4" color={"white"}>
                             Impress your customers with professional and visually stunning quotes
                         </Typography>
                         <HeroButton href="https://dashboard.bryxapp.com/" variant="contained" color="secondary">
