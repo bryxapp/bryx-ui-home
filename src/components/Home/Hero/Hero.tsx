@@ -27,12 +27,12 @@ const Hero = () => {
                 <Grid container direction="row" justifyContent={"flex-end"} alignItems="center" >
                     <Grid item xs={14} md={6}>
                         <Typography variant="h2" fontWeight="bold" color={"white"}>
-                            Transform Your Quotes
+                            Stand Out From The Rest
                         </Typography>
                         <Typography variant="h4" color={"white"}>
                             Impress your customers with professional and visually stunning quotes
                         </Typography>
-                        <HeroButton href="https://dashboard.bryxapp.com/" variant="contained" color="secondary">
+                        <HeroButton href="https://dashboard.bryxapp.com/" variant="contained" color="primary">
                             Get Started
                         </HeroButton>
                     </Grid>

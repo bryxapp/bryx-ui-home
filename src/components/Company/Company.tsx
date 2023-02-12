@@ -41,13 +41,13 @@ const Company = () => {
                         <Typography variant="body1" gutterBottom>
                             Bryan Thomas is the founder and of the bryx application and platform. He has over 4 years of experience in the field of software development and has a passion for creating reliable and innovative products.
                         </Typography>
-                        <FounderButton href="https://www.linkedin.com/in/bryan-m-thomas/" variant="outlined" color="secondary">
+                        <FounderButton href="https://www.linkedin.com/in/bryan-m-thomas/" variant="outlined" color="primary">
                             <WorkIcon style={{ marginRight: '8px' }} /> LinkedIn
                         </FounderButton>
-                        <FounderButton href="https://github.com/BryanMThomas" variant="outlined" color="secondary">
+                        <FounderButton href="https://github.com/BryanMThomas" variant="outlined" color="primary">
                             <CodeIcon style={{ marginRight: '8px' }} />GitHub
                         </FounderButton>
-                        <FounderButton href="mailto:thomas.bryan.m@gmail.com" variant="outlined" color="secondary">
+                        <FounderButton href="mailto:thomas.bryan.m@gmail.com" variant="outlined" color="primary">
                             <EmailIcon style={{ marginRight: '8px' }} />Get in Touch
                         </FounderButton>
                     </Grid>

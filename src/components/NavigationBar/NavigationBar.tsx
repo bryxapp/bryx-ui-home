@@ -24,7 +24,9 @@ const NavigationBar = () => {
       elevation={0}
     >
       <Toolbar sx={{ flexWrap: 'wrap' }}>
-        <Logo />
+        <Link href="/" underline='none'>
+          <Logo />
+        </Link>
         <Typography variant="h3" fontWeight="bold" color="inherit" noWrap sx={{ flexGrow: 1 }}>
           BRYX
         </Typography>
@@ -54,10 +56,10 @@ const NavigationBar = () => {
             Support
           </NavLink>
         </nav>
-        <NavButton variant="text" color="secondary">
+        <NavButton variant="text" color="primary">
           Sign In
         </NavButton>
-        <NavButton href="https://dashboard.bryxapp.com/" variant="contained" color="secondary">
+        <NavButton href="https://dashboard.bryxapp.com/" variant="contained" color="primary">
           Get Started
         </NavButton>
       </Toolbar>
