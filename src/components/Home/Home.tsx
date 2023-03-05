@@ -68,6 +68,7 @@ const Home = () => {
                     </StyledCard>
                 </Grid>
             </Grid>
+            <div style={{ height: 5 + 'rem' }} />
         </StyledDiv>
     );
 };
