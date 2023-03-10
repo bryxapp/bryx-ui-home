@@ -56,9 +56,6 @@ const NavigationBar = () => {
             Support
           </NavLink>
         </nav>
-        <NavButton variant="text" color="primary">
-          Sign In
-        </NavButton>
         <NavButton href="https://dashboard.bryxapp.com/" variant="contained" color="primary">
           Get Started
         </NavButton>
